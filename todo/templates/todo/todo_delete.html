@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Are you sure delete {{todo}} ?</p>
+            <input type="submit" value="Delete">
+        </form>
+    </div>
+    <div>
+        <a href="{% url 'list'%}">
+            <button> No </button>
+        </a>
+    </div>
+{% endblock content %}
